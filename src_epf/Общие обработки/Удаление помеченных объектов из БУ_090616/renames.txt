@@ -1,0 +1,10 @@
+﻿559f8fdc-c235-4d38-adb4-9fbb14d28f36.1-->und\559f8fdc-c235-4d38-adb4-9fbb14d28f36.1
+801d74c6-eca3-4360-890b-01294f39f0d8-->und\801d74c6-eca3-4360-890b-01294f39f0d8
+801d74c6-eca3-4360-890b-01294f39f0d8.0-->Form\Форма
+85bd4aa9-f975-427a-901b-a7cb915b1247-->und\85bd4aa9-f975-427a-901b-a7cb915b1247
+cdc6d5ed-45c5-4d21-a00d-326247202e07-->und\cdc6d5ed-45c5-4d21-a00d-326247202e07
+cdc6d5ed-45c5-4d21-a00d-326247202e07.0-->Form\ВыборОбъектовДляОтбора
+copyinfo-->und\copyinfo
+root-->und\root
+version-->und\version
+versions-->und\versions

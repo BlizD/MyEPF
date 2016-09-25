@@ -1,0 +1,7 @@
+﻿6a0a99b9-1c22-4956-af6d-4558d1e9676d-->und\6a0a99b9-1c22-4956-af6d-4558d1e9676d
+6a0a99b9-1c22-4956-af6d-4558d1e9676d.0-->Form\Форма
+copyinfo-->und\copyinfo
+f53babaf-f6df-4aca-9355-f1f564cfd6d6-->und\f53babaf-f6df-4aca-9355-f1f564cfd6d6
+root-->und\root
+version-->und\version
+versions-->und\versions

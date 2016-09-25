@@ -1,0 +1,202 @@
+﻿{"#",e603c0f2-92fb-4d47-8f38-a44a381cf235,
+{1,
+{3,
+{1,"Имя",
+{"Pattern",
+{"S",64,1}
+},"",0},
+{3,"ТипСтроки",
+{"Pattern",
+{"N",10,0,0}
+},"",0},
+{2,"Данные",
+{"Pattern",
+{"S"}
+},"",0}
+},
+{2,3,0,1,1,3,2,2,
+{1,1,
+{2,0,3,
+{"S","Отчеты"},
+{"N",4},
+{"S",""},1,
+{1,1,
+{2,1,3,
+{"S","Отчет"},
+{"N",0},
+{"S","<dataCompositionSchema xmlns=""http://v8.1c.ru/8.1/data-composition-system/schema"" xmlns:dcscom=""http://v8.1c.ru/8.1/data-composition-system/common"" xmlns:dcscor=""http://v8.1c.ru/8.1/data-composition-system/core"" xmlns:dcsset=""http://v8.1c.ru/8.1/data-composition-system/settings"" xmlns:v8=""http://v8.1c.ru/8.1/data/core"" xmlns:v8ui=""http://v8.1c.ru/8.1/data/ui"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type=""DataSetQuery"">
+		<name>НаборДанных1</name>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Предопределенный</dataPath>
+			<field>Предопределенный</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>УсловныеЕдиницы</dataPath>
+			<field>УсловныеЕдиницы</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Менеджер</dataPath>
+			<field>Менеджер</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>ВерсияДанных</dataPath>
+			<field>ВерсияДанных</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Код</dataPath>
+			<field>Код</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>СуммаДоговора</dataPath>
+			<field>СуммаДоговора</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>ИмяПредопределенныхДанных</dataPath>
+			<field>ИмяПредопределенныхДанных</field>
+		</field>
+		<field xsi:type=""DataSetFieldField"">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	_ДоговорыКонтрагентов.Ссылка,
+	_ДоговорыКонтрагентов.ВерсияДанных,
+	_ДоговорыКонтрагентов.ПометкаУдаления,
+	_ДоговорыКонтрагентов.Код,
+	_ДоговорыКонтрагентов.Наименование,
+	_ДоговорыКонтрагентов.СуммаДоговора,
+	_ДоговорыКонтрагентов.УсловныеЕдиницы,
+	_ДоговорыКонтрагентов.Контрагент,
+	_ДоговорыКонтрагентов.Менеджер,
+	_ДоговорыКонтрагентов.Предопределенный,
+	_ДоговорыКонтрагентов.ИмяПредопределенныхДанных
+ИЗ
+	Справочник._ДоговорыКонтрагентов КАК _ДоговорыКонтрагентов
+ГДЕ
+	_ДоговорыКонтрагентов.Ссылка = &amp;Ссылка</query>
+	</dataSet>
+	<parameter>
+		<name>Ссылка</name>
+		<title xsi:type=""v8:LocalStringType"">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ссылка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1=""http://v8.1c.ru/8.1/data/enterprise/current-config"">d4p1:CatalogRef._ДоговорыКонтрагентов</v8:Type>
+		</valueType>
+		<value xsi:type=""dcscor:DesignTimeValue"">Справочник._ДоговорыКонтрагентов.ПустаяСсылка</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type=""xs:string"">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style=""http://v8.1c.ru/8.1/data/ui/style"" xmlns:sys=""http://v8.1c.ru/8.1/data/ui/fonts/system"" xmlns:web=""http://v8.1c.ru/8.1/data/ui/colors/web"" xmlns:win=""http://v8.1c.ru/8.1/data/ui/colors/windows"">
+			<dcsset:selection>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>ВерсияДанных</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>ИмяПредопределенныхДанных</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>Код</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>Менеджер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>Наименование</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>ПометкаУдаления</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>Предопределенный</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>СуммаДоговора</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type=""dcsset:SelectedItemField"">
+					<dcsset:field>УсловныеЕдиницы</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type=""dcsset:StructureItemGroup"">
+				<dcsset:order>
+					<dcsset:item xsi:type=""dcsset:OrderItemAuto""/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type=""dcsset:SelectedItemAuto""/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</dataCompositionSchema>"},1,
+{1,1,
+{2,2,3,
+{"S","Вариант"},
+{"N",1},
+{"S","<Settings xmlns=""http://v8.1c.ru/8.1/data-composition-system/settings"" xmlns:dcscor=""http://v8.1c.ru/8.1/data-composition-system/core"" xmlns:style=""http://v8.1c.ru/8.1/data/ui/style"" xmlns:sys=""http://v8.1c.ru/8.1/data/ui/fonts/system"" xmlns:v8=""http://v8.1c.ru/8.1/data/core"" xmlns:v8ui=""http://v8.1c.ru/8.1/data/ui"" xmlns:web=""http://v8.1c.ru/8.1/data/ui/colors/web"" xmlns:win=""http://v8.1c.ru/8.1/data/ui/colors/windows"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+	<selection>
+		<item xsi:type=""SelectedItemField"">
+			<field>Ссылка</field>
+		</item>
+	</selection>
+	<filter>
+		<item xsi:type=""FilterItemComparison"">
+			<left xsi:type=""dcscor:Field"">Контрагент</left>
+			<comparisonType>Contains</comparisonType>
+			<right xsi:type=""xs:string""/>
+		</item>
+		<item xsi:type=""FilterItemComparison"">
+			<left xsi:type=""dcscor:Field"">Менеджер</left>
+			<comparisonType>Equal</comparisonType>
+			<right xmlns:d4p1=""http://v8.1c.ru/8.1/data/enterprise/current-config"" xsi:type=""d4p1:CatalogRef.Пользователи"">81aafda3-1d8e-11e6-9f6e-00241d83faf4</right>
+		</item>
+		<item xsi:type=""FilterItemComparison"">
+			<left xsi:type=""dcscor:Field"">Ссылка</left>
+			<comparisonType>Equal</comparisonType>
+			<right xmlns:d4p1=""http://v8.1c.ru/8.1/data/enterprise/current-config"" xsi:type=""d4p1:CatalogRef._ДоговорыКонтрагентов"">00000000-0000-0000-0000-000000000000</right>
+		</item>
+	</filter>
+	<item xsi:type=""StructureItemGroup"">
+		<order>
+			<item xsi:type=""OrderItemAuto""/>
+		</order>
+		<selection>
+			<item xsi:type=""SelectedItemAuto""/>
+		</selection>
+	</item>
+</Settings>"},0}
+}
+}
+}
+}
+},-1,2}
+}
+}

@@ -1,0 +1,65 @@
+﻿<xs:schema xmlns:ns1="http://v8.1c.ru/8.1/data/core" xmlns:ns2="http://v8.1c.ru/8.1/data/enterprise" xmlns:ns3="http://www.1c.ru/SaaS/RemoteAdministration/Messages" xmlns:tns="http://www.1c.ru/SaaS/SuppliedData" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.1c.ru/SaaS/SuppliedData" attributeFormDefault="unqualified" elementFormDefault="qualified">
+	<xs:import namespace="http://v8.1c.ru/8.1/data/core"/>
+	<xs:import namespace="http://v8.1c.ru/8.1/data/enterprise"/>
+	<xs:complexType name="ArrayOfDataType">
+		<xs:sequence>
+			<xs:element name="DataType" type="tns:DataType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ArrayOfDataType1_0_1">
+		<xs:sequence>
+			<xs:element name="DataType" type="tns:DataType1_0_1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="DataProcessorType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Background"/>
+			<xs:enumeration value="Interactive"/>
+			<xs:enumeration value="InteractiveAndBackground"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="DataType">
+		<xs:sequence>
+			<xs:element name="Property" type="tns:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="Code" type="xs:string" use="required"/>
+		<xs:attribute name="Description" type="xs:string" use="required"/>
+		<xs:attribute name="Timeout" type="xs:decimal" default="0"/>
+	</xs:complexType>
+	<xs:complexType name="DataType1_0_1">
+		<xs:choice>
+			<xs:element name="Property" type="tns:PropertyType" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:choice>
+		<xs:attribute name="Code" type="xs:string" use="required"/>
+		<xs:attribute name="Description" type="xs:string"/>
+		<xs:attribute name="Timeout" type="xs:decimal" default="0"/>
+		<xs:attribute name="SuppressNotifications" type="xs:boolean" default="false"/>
+	</xs:complexType>
+	<xs:complexType name="PropertyType">
+		<xs:attribute name="Code" type="xs:string" use="required"/>
+		<xs:attribute name="Description" type="xs:string" use="required"/>
+		<xs:attribute name="IsKey" type="xs:boolean" default="false"/>
+	</xs:complexType>
+	<xs:complexType name="SuppliedDataProcessor">
+		<xs:all>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Version" type="xs:string"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="Type" type="tns:DataProcessorType"/>
+			<xs:element name="JobSchedule" type="ns2:JobSchedule"/>
+			<xs:element name="DataTypes" type="tns:ArrayOfDataType"/>
+		</xs:all>
+		<xs:attribute name="Version" type="xs:string" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="SuppliedDataProcessor1_0_1">
+		<xs:all>
+			<xs:element name="Name" type="xs:string"/>
+			<xs:element name="Version" type="xs:string"/>
+			<xs:element name="Description" type="xs:string"/>
+			<xs:element name="Type" type="tns:DataProcessorType"/>
+			<xs:element name="JobSchedule" type="ns2:JobSchedule"/>
+			<xs:element name="DataTypes" type="tns:ArrayOfDataType1_0_1"/>
+		</xs:all>
+		<xs:attribute name="Version" type="xs:string" use="required"/>
+	</xs:complexType>
+</xs:schema>
