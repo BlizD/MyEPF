@@ -1,0 +1,13 @@
+﻿TABLE {
+	BORDER-TOP: black 4px double; BORDER-RIGHT: black 4px double; BORDER-COLLAPSE: collapse; BORDER-BOTTOM: black 4px double; BORDER-LEFT: black 4px double
+}
+TH {
+	BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: black 1px solid; PADDING-RIGHT: 5px
+}
+TD {
+	BORDER-TOP: black 1px solid; BORDER-RIGHT: black 1px solid; BORDER-BOTTOM: black 1px solid; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; PADDING-LEFT: 5px; BORDER-LEFT: black 1px solid; PADDING-RIGHT: 5px
+}
+blockquote {
+	background: #f9f9f9;
+	color: #7c7c7c;
+}

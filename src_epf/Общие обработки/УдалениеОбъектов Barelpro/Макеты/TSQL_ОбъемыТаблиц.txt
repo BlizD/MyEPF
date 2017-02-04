@@ -1,0 +1,32 @@
+﻿set nocount on
+if exists(select name from tempdb..sysobjects where name='##tmp')
+drop table ##tmp
+
+create table ##tmp(nam varchar(50), rows int, res varchar(15),data varchar(15),ind_sze varchar(15),unsed varchar(15))
+
+declare @tblname varchar(50)
+declare tblname CURSOR for select name from sysobjects where xtype='U'
+
+open tblname
+
+Fetch next from tblname into @tblname
+
+WHILE @@FETCH_STATUS = 0
+
+BEGIN
+
+insert into ##tmp
+
+exec sp_spaceused @tblname
+
+  FETCH NEXT FROM tblname INTO @tblname
+
+END
+
+CLOSE tblname
+
+deallocate tblname
+
+select nam Table_Name,rows Total_Rows,res Total_Table_Size,data Data_size,ind_sze Index_Size,unsed Unused_Space from ##tmp
+
+drop table ##tmp
